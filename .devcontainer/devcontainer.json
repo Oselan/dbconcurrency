@@ -1,0 +1,12 @@
+{
+    "name": "PostgreSQL Codespace",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "features": {
+      "ghcr.io/devcontainers/features/postgres:1": {
+        "version": "15"
+      }
+    },
+    "postCreateCommand": "docker run --name postgres -e POSTGRES_USER=dany -e POSTGRES_PASSWORD=mypassword -e POSTGRES_DB=demo1 -p 5432:5432 -d postgres:latest",
+    "forwardPorts": [5432]
+  }
+  
